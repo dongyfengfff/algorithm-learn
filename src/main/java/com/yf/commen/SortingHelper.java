@@ -1,6 +1,9 @@
 package com.yf.commen;
 
+import com.yf.InsertionSort.InsertionSort;
 import com.yf.merge_sort.MergeSort;
+import com.yf.quick_sort.QuickSort;
+
 
 import java.text.DecimalFormat;
 
@@ -42,7 +45,21 @@ public class SortingHelper {
         if(sortname.equals("MergeSort")){
             MergeSort.sort(arr);
         } else if(sortname.equals("MergeSort2")){
-            //MergeSort.sort2(arr);
+            MergeSort.sort2(arr);
+        }  else if(sortname.equals("MergeSort3")) {
+            MergeSort.sort3(arr);
+        }   else if(sortname.equals("MergeSort4")) {
+            MergeSort.sort4(arr);
+        }   else if(sortname.equals("MergeSortBU")) {
+            MergeSort.sortBU(arr);
+        }  else if (sortname.equals("InsertionSort")) {
+            InsertionSort.sort(arr);
+        }  else if(sortname.equals("InsertionSort2")) {
+            InsertionSort.sort2(arr);
+        }  else if(sortname.equals("QuickSort")) {
+            QuickSort.sort(arr);
+        }  else if(sortname.equals("QuickSort2")) {
+            QuickSort.sort2(arr);
         }
 
         // 结束时间
