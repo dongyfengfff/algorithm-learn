@@ -1,8 +1,8 @@
-package com.qj.InsertionSort;
+package com.yf.InsertionSort;
 
-import com.qj.selectionSort.ArrayGenerator;
+import com.yf.commen.ArrayGenerator;
+import com.yf.commen.SortingHelper;
 
-import java.security.spec.ECField;
 import java.util.Arrays;
 
 /**
@@ -56,6 +56,28 @@ public class InsertionSort {
             arr[j] = tmp;
         }
     }
+
+
+    /**
+     * todo 为 优化归并排序准备的接口
+     */
+    public static <E extends Comparable<E>> void sort(E[] arr , int l , int r) {
+
+        for(int i = l ; i <= r ; i++) {
+
+            // 将 arr[i] 插入到合适的位置
+            E tmp = arr[i]; // 进行暂存，浪费了额外空间
+            int j;
+            for(j = i ; j - 1 >= l && tmp.compareTo(arr[j - 1]) < 0 ; j--){
+                // 不断往后移，就是赋值
+                arr[j] = arr[j - 1];
+            }
+            arr[j] = tmp;
+        }
+    }
+
+
+
 
     // todo 标注泛型
     private static <E> void swap(E[] arr, int i, int j) {
